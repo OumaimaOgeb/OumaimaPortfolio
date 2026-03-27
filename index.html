@@ -46,6 +46,16 @@ nav.scrolled{background:rgba(12,11,9,0.92);backdrop-filter:blur(12px);padding:1.
 .nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav-burger.open span:nth-child(2){opacity:0}
 .nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* PASSION SECTION */
+.passion-section{margin-top:4rem;padding:3rem;border:1px solid rgba(201,168,76,0.18);background:rgba(201,168,76,0.03);display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center}
+.passion-img{width:120px;height:120px;object-fit:contain;flex-shrink:0;filter:brightness(0.9) contrast(1.1)}
+.passion-content{}
+.passion-label{font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+.passion-title{font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--cream);margin-bottom:0.8rem;font-style:italic}
+.passion-desc{font-size:0.85rem;color:var(--gray-light);line-height:1.8}
+.passion-tools{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.2rem}
+.passion-tool{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.8rem;border:1px solid rgba(201,168,76,0.25);color:var(--gold-light);background:rgba(201,168,76,0.04)}
+
 
 /* MOBILE MENU */
 .mobile-menu{position:fixed;inset:0;z-index:850;background:var(--bg);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s ease}
@@ -325,6 +335,25 @@ footer{background:var(--bg);padding:2rem 6rem;display:flex;justify-content:space
         </div>
       </div>
     </section>
+          <div class="passion-section">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png"
+          alt="Adobe Photoshop"
+          class="passion-img"
+        >
+        <div class="passion-content">
+          <p class="passion-label">{{ t.skills.passionLabel }}</p>
+          <h3 class="passion-title">{{ t.skills.passionTitle }}</h3>
+          <p class="passion-desc">{{ t.skills.passionDesc }}</p>
+          <div class="passion-tools">
+            <span class="passion-tool">Adobe Photoshop</span>
+            <span class="passion-tool">Adobe Lightroom</span>
+            <span class="passion-tool">Color Grading</span>
+            <span class="passion-tool">Skin Retouching</span>
+            <span class="passion-tool">Compositing</span>
+          </div>
+        </div>
+      </div>
 
     <section id="contact" class="contact">
       <div class="section-label">{{ t.contact.label }}</div>
@@ -473,7 +502,13 @@ createApp({
             { icon: '◉', name: 'Photography', desc: 'Capturing the essence of performances, events, and visual stories. Specialized in editing and retouching with precision.', tags: ['Adobe Lightroom', 'Adobe Photoshop', 'Portrait', 'Performance'] },
             { icon: '◈', name: 'Visual Identity', desc: 'Creating cohesive brand identities through illustration, typography, and design systems.', tags: ['Adobe Illustrator', 'Adobe Photoshop', 'Branding', 'Logo Design'] },
             { icon: '▲', name: 'Photo Retouching', desc: 'Transforming raw images into polished, emotionally resonant visuals through expert retouching.', tags: ['Skin Retouching', 'Color Grading', 'Compositing'] }
-          ]
+          ],
+          viTitle: 'Design & Editing Expertise',
+            viItem1: 'Creating visual identities using Adobe Illustrator and Adobe Photoshop.',
+            viItem2: 'Photo editing and retouching using Adobe Photoshop and Adobe Lightroom.',
+            passionLabel: '— Passion',
+            passionTitle: 'A love for photography editing & retouching',
+            passionDesc: 'I am passionate about working with photography, especially editing and retouching — finding the hidden story within an image and bringing it to life through light, tone, and texture.',
         },
         contact: { label: '— Contact', title: "Let's create something together", sub: 'Open to curatorial projects, photography commissions, and visual identity work.' },
         footer: { rights: 'Curator & Photographer' }
@@ -500,7 +535,13 @@ createApp({
             { icon: '◉', name: 'Fotografie', desc: 'Das Wesen von Aufführungen und visuellen Geschichten einfangen. Spezialisiert auf Bearbeitung und Retusche.', tags: ['Adobe Lightroom', 'Adobe Photoshop', 'Porträt', 'Performance'] },
             { icon: '◈', name: 'Visuelle Identität', desc: 'Kohärente Markenidentitäten durch Illustration, Typografie und Designsysteme schaffen.', tags: ['Adobe Illustrator', 'Adobe Photoshop', 'Branding', 'Logo-Design'] },
             { icon: '▲', name: 'Foto-Retusche', desc: 'Rohbilder in polierte, emotional resonante Visuals durch fachmännische Retusche verwandeln.', tags: ['Hautretusche', 'Farbkorrektur', 'Compositing'] }
-          ]
+          ],
+          viTitle: 'Design & Bearbeitungs-Expertise',
+            viItem1: 'Erstellung von visuellen Identitäten mit Adobe Illustrator und Adobe Photoshop.',
+            viItem2: 'Fotobearbeitung und Retusche mit Adobe Photoshop und Adobe Lightroom.',
+            passionLabel: '— Leidenschaft',
+            passionTitle: 'Eine Leidenschaft für Fotobearbeitung & Retusche',
+            passionDesc: 'Ich bin leidenschaftlich in der Fotografie tätig, besonders in der Bearbeitung und Retusche — die verborgene Geschichte in einem Bild zu finden.',
         },
         contact: { label: '— Kontakt', title: 'Lass uns gemeinsam etwas schaffen', sub: 'Offen für kuratorische Projekte, Fotografieaufträge und Arbeit an visueller Identität.' },
         footer: { rights: 'Kuratorin & Fotografin' }
