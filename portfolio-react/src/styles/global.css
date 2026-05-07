@@ -1,0 +1,21 @@
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #E4E5DD;
+  --black: #111111;
+  --gray: #76716c;
+  --gray-light: #aaaaaa;
+  --border: #d0d1c9;
+  --font: Helvetica, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--black);
+  font-family: var(--font);
+  font-weight: 400;
+  overflow-x: hidden;
+  cursor: auto;
+}
