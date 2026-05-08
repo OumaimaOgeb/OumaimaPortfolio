@@ -126,7 +126,7 @@ export default function Home({ t }: Props) {
       </div>
 
       <div className={styles.gallery}>
-        {(['work1','work2','work3','work4','work5','work6','work7','work8'] as const).map((key) => (
+        {(['work1','work2','work3','work4','work5','work6','work7','work8','work9','work10','work11','work12'] as const).map((key) => (
           <div key={key} className={styles.gItem}>
             <img src={getImage(key)} alt="" />
           </div>

@@ -16,7 +16,11 @@ const projects: Project[] = [
   { imageKey: 'work5', caption: 'Work 5', captionDe: 'Werk 5', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
   { imageKey: 'work6', caption: 'Work 6', captionDe: 'Werk 6', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
   { imageKey: 'work7', caption: 'Work 7', captionDe: 'Werk 7', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work8', caption: 'Work 8', captionDe: 'Werk 8', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work8',  caption: 'Work 8',  captionDe: 'Werk 8',  category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work9',  caption: 'Work 9',  captionDe: 'Werk 9',  category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work10', caption: 'Work 10', captionDe: 'Werk 10', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work11', caption: 'Work 11', captionDe: 'Werk 11', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work12', caption: 'Work 12', captionDe: 'Werk 12', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
 ];
 
 export default projects;
