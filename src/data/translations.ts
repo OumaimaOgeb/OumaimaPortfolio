@@ -47,7 +47,7 @@ export interface Translations {
 const translations: Record<Lang, Translations> = {
   en: {
     nav: { home: 'HOME', work: 'WORK', contact: 'CONTACT' },
-    bio: 'Oumaima Ogeb is a Germany Art Director with over 4 years of experience. With experience across a wide range of design disciplines, she specializes in thoughtful, typography-driven branding, Social Media Content Creation, editorial design, and art direction. She has worked on brand identities, campaigns, films, websites and packaging.',
+    bio: 'Oumaima Ogeb is a Germany-based Art Director with over 4 years of experience. With experience across a wide range of design disciplines, she specializes in thoughtful, typography-driven branding, Social Media Content Creation, editorial design, and art direction. She has worked on brand identities, campaigns, films, websites and packaging.',
     servicesHeading: 'Helping brands and businesses create meaningful connections with their audiences through:',
     services: [
       { title: 'Brand Identity Development:', desc: "Developing comprehensive visual identities that reflect a brand's core values and resonate with its target audience." },
@@ -79,13 +79,13 @@ const translations: Record<Lang, Translations> = {
     filterAll: 'All',
     roleTitle: 'Art Director',
     workIntro: 'Explore a selection of the projects',
-    workIntroPara: 'Oumaima Ogeb is a Germany Art Director with over 4 years of experience. With experience across a wide range of design disciplines, she specializes in thoughtful, typography-driven branding, Social Media Content Creation, editorial design, and art direction. She has worked on brand identities, campaigns, films, websites and packaging.',
+    workIntroPara: 'Oumaima Ogeb is a Germany-based Art Director with over 4 years of experience. With experience across a wide range of design disciplines, she specializes in thoughtful, typography-driven branding, Social Media Content Creation, editorial design, and art direction. She has worked on brand identities, campaigns, films, websites and packaging.',
     brandsHeading: "Some brands & orgs I've worked with",
     brandsSub: 'Over the years, collaborations with a wide range of brands and organizations have demonstrated adaptability to diverse industries while maintaining a commitment to tailored creative narratives',
   },
   de: {
     nav: { home: 'Startseite', work: 'Werke', contact: 'Kontakt' },
-    bio: 'Oumaima Ogeb ist eine in Deutschland tätige Art Directorin mit über 4 Jahren Erfahrung. Mit Expertise in einem breiten Spektrum an Designdisziplinen spezialisiert sie sich auf durchdachtes, typografiegetriebenes Branding, Social-Media-Content-Creation, Editorial Design und Art Direction. Sie hat an Markenidentitäten, Kampagnen, Filmen, Websites und Verpackungen gearbeitet.',
+    bio: 'Oumaima Ogeb ist eine in Deutschland ansässige Art Directorin mit über 4 Jahren Erfahrung. Mit Expertise in einem breiten Spektrum an Designdisziplinen spezialisiert sie sich auf durchdachtes, typografiegetriebenes Branding, Social-Media-Content-Creation, Editorial Design und Art Direction. Sie hat an Markenidentitäten, Kampagnen, Filmen, Websites und Verpackungen gearbeitet.',
     servicesHeading: 'Marken und Unternehmen dabei helfen, bedeutungsvolle Verbindungen mit ihren Zielgruppen zu schaffen durch:',
     services: [
       { title: 'Markenidentitätsentwicklung:', desc: 'Entwicklung umfassender visueller Identitäten, die die Kernwerte einer Marke widerspiegeln und bei der Zielgruppe Anklang finden.' },
@@ -117,7 +117,7 @@ const translations: Record<Lang, Translations> = {
     filterAll: 'Alle',
     roleTitle: 'Art Directorin',
     workIntro: 'Entdecken Sie eine Auswahl der Projekte',
-    workIntroPara: 'Oumaima Ogeb ist eine in Deutschland tätige Art Directorin mit über 4 Jahren Erfahrung. Mit Expertise in einem breiten Spektrum an Designdisziplinen spezialisiert sie sich auf durchdachtes, typografiegetriebenes Branding, Social-Media-Content-Creation, Editorial Design und Art Direction. Sie hat an Markenidentitäten, Kampagnen, Filmen, Websites und Verpackungen gearbeitet.',
+    workIntroPara: 'Oumaima Ogeb ist eine in Deutschland ansässige Art Directorin mit über 4 Jahren Erfahrung. Mit Expertise in einem breiten Spektrum an Designdisziplinen spezialisiert sie sich auf durchdachtes, typografiegetriebenes Branding, Social-Media-Content-Creation, Editorial Design und Art Direction. Sie hat an Markenidentitäten, Kampagnen, Filmen, Websites und Verpackungen gearbeitet.',
     brandsHeading: 'Einige Marken & Organisationen, mit denen ich gearbeitet habe',
     brandsSub: 'Im Laufe der Jahre haben Zusammenarbeiten mit einer Vielzahl von Marken und Organisationen die Anpassungsfähigkeit an verschiedene Branchen unter Beweis gestellt – stets mit dem Ziel, maßgeschneiderte kreative Erzählungen zu schaffen.',
   },
