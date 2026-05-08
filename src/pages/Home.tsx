@@ -4,6 +4,10 @@ import type { Translations } from '../data/translations';
 import { getImage } from '../data/images';
 import styles from './Home.module.css';
 import homeImage from '../assets/gifs/home.gif';
+import frameOne from '../assets/images/one.jpeg';
+import frameTwo from '../assets/gifs/second.gif';
+import frameThree from '../assets/gifs/third.gif';
+import frameFour from '../assets/images/four.jpeg';
 import brandWatanya from '../assets/images/watanya.png';
 import brandOzy from '../assets/images/ozy.png';
 import brandClamant from '../assets/images/clamant.png';
@@ -76,43 +80,17 @@ export default function Home({ t }: Props) {
 
       <hr className={styles.divider} />
 
-      {/* Image pairs */}
-      <div className={`${styles.imagePair} ${styles.imagePairPadV}`}>
-        <div className={styles.pairImg}>
-          <img
-            src="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/eceba8ab-2c15-4a73-ace4-c9d993f4eab0_rw_1200.png?h=4e2e81e7227f3de45dd9a1367d6e9a2d"
-            srcSet="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/eceba8ab-2c15-4a73-ace4-c9d993f4eab0_rw_600.png?h=69320735024a004c241cfda5302450ac 600w, https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/eceba8ab-2c15-4a73-ace4-c9d993f4eab0_rw_1200.png?h=4e2e81e7227f3de45dd9a1367d6e9a2d 700w"
-            sizes="(max-width: 700px) 100vw, 700px"
-            alt=""
-          />
-        </div>
-        <div className={styles.pairImg}>
-          <img
-            src="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/457f896a-3499-4d89-a303-08bec4268a8d_rw_1200.gif?h=9fcd3a5036d071145bbd5bf09b8c5d5b"
-            srcSet="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/457f896a-3499-4d89-a303-08bec4268a8d_rw_600.gif?h=e190bf8a8fdfc87d9416dfa1b64f6026 600w, https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/457f896a-3499-4d89-a303-08bec4268a8d_rw_1200.gif?h=9fcd3a5036d071145bbd5bf09b8c5d5b 700w"
-            sizes="(max-width: 700px) 100vw, 700px"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div className={`${styles.imagePair} ${styles.imagePairPadB}`}>
-        <div className={styles.pairImg}>
-          <img
-            src="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/405882f5-2ae0-445d-9b22-581d373904a5_rw_1200.gif?h=12c43daba93dbf1eade2de49fffd16d3"
-            srcSet="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/405882f5-2ae0-445d-9b22-581d373904a5_rw_600.gif?h=9add923fa56e0f777a9759112ea6a643 600w, https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/405882f5-2ae0-445d-9b22-581d373904a5_rw_1200.gif?h=12c43daba93dbf1eade2de49fffd16d3 700w"
-            sizes="(max-width: 700px) 100vw, 700px"
-            alt=""
-          />
-        </div>
-        <div className={styles.pairImg}>
-          <img
-            src="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/d51158d5-709f-498a-adbd-ff08bce37a61_rw_1200.png?h=cafe72a6703b6c5fa10593f9ecbf4ace"
-            srcSet="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/d51158d5-709f-498a-adbd-ff08bce37a61_rw_600.png?h=3fbbdf4ebfc6fcebb121aa47cc8a15d8 600w, https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/d51158d5-709f-498a-adbd-ff08bce37a61_rw_1200.png?h=cafe72a6703b6c5fa10593f9ecbf4ace 700w"
-            sizes="(max-width: 700px) 100vw, 700px"
-            alt=""
-          />
-        </div>
+      {/* Framed image grid */}
+      <div className={styles.frameGrid}>
+        {[frameOne, frameTwo, frameThree, frameFour].map((src, i) => (
+          <div key={i} className={styles.frameItem}>
+            <span className={`${styles.corner} ${styles.cornerTL}`} />
+            <span className={`${styles.corner} ${styles.cornerTR}`} />
+            <span className={`${styles.corner} ${styles.cornerBL}`} />
+            <span className={`${styles.corner} ${styles.cornerBR}`} />
+            <img src={src} alt="" />
+          </div>
+        ))}
       </div>
 
 
