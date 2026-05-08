@@ -84,6 +84,11 @@ export default function Nav({ t, lang, onLangChange }: Props) {
         <Link to="/" onClick={close}>{t.nav.home}</Link>
         <Link to="/work" onClick={close}>{t.nav.work}</Link>
         <a href="#contact" onClick={close}>{t.nav.contact}</a>
+        <div className={styles.mobileLang}>
+          <button className={lang === 'en' ? styles.mobileLangActive : ''} onClick={() => { onLangChange('en'); close(); }}>EN</button>
+          <span>/</span>
+          <button className={lang === 'de' ? styles.mobileLangActive : ''} onClick={() => { onLangChange('de'); close(); }}>DE</button>
+        </div>
       </div>
     </>
   );

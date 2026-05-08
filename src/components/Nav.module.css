@@ -132,6 +132,26 @@
 }
 .mobileMenu a:hover { color: var(--gray); }
 
+.mobileLang {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.mobileLang button {
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 0;
+}
+.mobileLang span { color: var(--gray); }
+.mobileLangActive { color: var(--black) !important; font-weight: 700 !important; }
+
 @media (max-width: 900px) {
   .header { grid-template-columns: 1fr auto; padding: 1.2rem 1.5rem; position: relative; }
   .navLinks, .right { display: none; }
