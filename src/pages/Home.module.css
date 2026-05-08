@@ -344,6 +344,8 @@
   .tree { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
   .stats { flex-direction: column; padding: 0 1.5rem; margin-top: 2rem; }
   .statCol { border-right: none; border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+  .statNumber { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .statLabel { font-size: 0.72rem; }
   .headingCenter { padding: 2.5rem 1.5rem 1rem; }
   .modButton { padding: 3rem 1.5rem 2.5rem; }
   .contact { padding: 4rem 1.5rem 2rem; }
