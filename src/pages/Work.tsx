@@ -61,11 +61,6 @@ export default function Work({ t, lang }: Props) {
 
   return (
     <main className={styles.page}>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <p className={styles.heroLabel}>{t.heroLabel}</p>
-        <h1 className={styles.heroQuote}>{t.heroQuote}</h1>
-      </section>
 
       {/* Intro */}
       <div className={styles.intro}>
