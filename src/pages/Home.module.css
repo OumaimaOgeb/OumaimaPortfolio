@@ -219,13 +219,18 @@
 
 /* Gallery grid */
 .gallery {
-  padding: 4rem 7rem 5rem;
-  columns: 6;
-  column-gap: 2rem;
+  display: flex;
+  gap: 1.8rem;
+  padding: 4rem 5rem 5rem;
+  align-items: flex-start;
+}
+.gCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 .gItem {
-  break-inside: avoid;
-  margin-bottom: 2.5rem;
   overflow: hidden;
 }
 .gItem img {
@@ -340,7 +345,8 @@
   .tree { flex-direction: column; gap: 2rem; }
   .stats { flex-direction: column; }
   .statCol { border-right: none; border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
-  .gallery { columns: 2; padding: 2rem 1.5rem; column-gap: 1.2rem; }
+  .gallery { flex-wrap: wrap; padding: 2rem 1.5rem; gap: 1rem; }
+  .gCol { flex: 1 1 40%; padding-top: 0 !important; }
   .brandsSection { padding-left: 1.5rem; padding-right: 1.5rem; }
   .brandsGrid { grid-template-columns: repeat(2, 1fr); }
   .frameGrid { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 2rem; max-width: 100px; margin: 0 auto; }

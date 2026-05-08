@@ -126,11 +126,30 @@ export default function Home({ t }: Props) {
       </div>
 
       <div className={styles.gallery}>
-        {(['work1','work2','work3','work4','work5','work6','work7','work8','work9','work10','work11','work12'] as const).map((key) => (
-          <div key={key} className={styles.gItem}>
-            <img src={getImage(key)} alt="" />
-          </div>
-        ))}
+        <div className={styles.gCol} style={{ paddingTop: '0rem' }}>
+          <div className={styles.gItem}><img src={getImage('work1')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work2')} alt="" /></div>
+        </div>
+        <div className={styles.gCol} style={{ paddingTop: '3rem' }}>
+          <div className={styles.gItem}><img src={getImage('work3')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work4')} alt="" /></div>
+        </div>
+        <div className={styles.gCol} style={{ paddingTop: '1rem' }}>
+          <div className={styles.gItem}><img src={getImage('work5')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work6')} alt="" /></div>
+        </div>
+        <div className={styles.gCol} style={{ paddingTop: '0rem' }}>
+          <div className={styles.gItem}><img src={getImage('work7')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work8')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work9')} alt="" /></div>
+        </div>
+        <div className={styles.gCol} style={{ paddingTop: '2rem' }}>
+          <div className={styles.gItem}><img src={getImage('work10')} alt="" /></div>
+          <div className={styles.gItem}><img src={getImage('work11')} alt="" /></div>
+        </div>
+        <div className={styles.gCol} style={{ paddingTop: '4rem' }}>
+          <div className={styles.gItem}><img src={getImage('work12')} alt="" /></div>
+        </div>
       </div>
 
       <div className={styles.modButton}>
