@@ -355,6 +355,10 @@
   .contactTitle { font-size: clamp(2.2rem, 10vw, 4rem); line-height: 1.1; }
   .bioText { font-size: 15px; }
   .servicesHeading { font-size: clamp(1.4rem, 5vw, 2rem); }
+  .tree { text-align: center; }
+  .brandsHeading { text-align: center; }
+  .stats { text-align: center; }
+  .location { text-align: center; }
 }
 @media (max-width: 480px) {
   .brandsGrid { grid-template-columns: 1fr; }
