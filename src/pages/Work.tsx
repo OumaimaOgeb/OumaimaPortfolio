@@ -17,14 +17,7 @@ interface Lightbox {
 }
 
 export default function Work({ t, lang }: Props) {
-  const [activeCategory, setActiveCategory] = useState('all');
   const [lb, setLb] = useState<Lightbox>({ open: false, project: null, index: 0 });
-
-  const filtered = activeCategory === 'all'
-    ? projects
-    : projects.filter((p) =>
-        lang === 'de' ? p.categoryDe === activeCategory : p.category === activeCategory
-      );
 
   const openLightbox = (project: Project, index: number) => {
     setLb({ open: true, project, index });
@@ -38,17 +31,17 @@ export default function Work({ t, lang }: Props) {
 
   const lbPrev = useCallback(() => {
     setLb((prev) => {
-      const i = (prev.index - 1 + filtered.length) % filtered.length;
-      return { open: true, project: filtered[i], index: i };
+      const i = (prev.index - 1 + projects.length) % projects.length;
+      return { open: true, project: projects[i], index: i };
     });
-  }, [filtered]);
+  }, []);
 
   const lbNext = useCallback(() => {
     setLb((prev) => {
-      const i = (prev.index + 1) % filtered.length;
-      return { open: true, project: filtered[i], index: i };
+      const i = (prev.index + 1) % projects.length;
+      return { open: true, project: projects[i], index: i };
     });
-  }, [filtered]);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -61,10 +54,10 @@ export default function Work({ t, lang }: Props) {
     return () => window.removeEventListener('keydown', onKey);
   }, [lb.open, lbPrev, lbNext, closeLb]);
 
-  // Reset category when language changes
-  useEffect(() => { setActiveCategory('all'); }, [lang]);
-
-  const categories = lang === 'de' ? t.categories : ['Performance', 'Brand & Identity'];
+  const rows: Project[][] = [];
+  for (let i = 0; i < projects.length; i += 2) {
+    rows.push(projects.slice(i, i + 2));
+  }
 
   return (
     <main className={styles.page}>
@@ -74,42 +67,27 @@ export default function Work({ t, lang }: Props) {
         <h1 className={styles.heroQuote}>{t.heroQuote}</h1>
       </section>
 
-      {/* Filter */}
-      <div className={styles.filterBar}>
-        <button
-          className={`${styles.filterBtn} ${activeCategory === 'all' ? styles.filterActive : ''}`}
-          onClick={() => setActiveCategory('all')}
-        >
-          {t.filterAll}
-        </button>
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            className={`${styles.filterBtn} ${activeCategory === cat ? styles.filterActive : ''}`}
-            onClick={() => setActiveCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
+      {/* Intro */}
+      <div className={styles.intro}>
+        <h2 className={styles.introTitle}>{t.workIntro}</h2>
+        <p className={styles.introPara}>{t.workIntroPara}</p>
       </div>
 
-      {/* Grid */}
+      {/* Grid — pairs of images */}
       <div className={styles.grid}>
-        {filtered.map((project, i) => (
-          <div
-            key={project.imageKey}
-            className={styles.card}
-            onClick={() => openLightbox(project, i)}
-          >
-            <img src={getImage(project.imageKey)} alt={lang === 'de' ? project.captionDe : project.caption} />
-            <div className={styles.cardOverlay}>
-              <p className={styles.cardCaption}>
-                {lang === 'de' ? project.captionDe : project.caption}
-              </p>
-              <span className={styles.cardCategory}>
-                {lang === 'de' ? project.categoryDe : project.category}
-              </span>
-            </div>
+        {rows.map((row, ri) => (
+          <div className={styles.row} key={ri}>
+            {row.map((project, ci) => (
+              <div key={project.imageKey} className={styles.item} onClick={() => openLightbox(project, ri * 2 + ci)}>
+                <div className={styles.imgWrap}>
+                  <img src={getImage(project.imageKey)} alt={lang === 'de' ? project.titleDe : project.title} />
+                </div>
+                <div className={styles.caption}>
+                  <strong>{lang === 'de' ? project.titleDe : project.title}</strong>
+                  <span>{lang === 'de' ? project.descDe : project.desc}</span>
+                </div>
+              </div>
+            ))}
           </div>
         ))}
       </div>
@@ -120,12 +98,12 @@ export default function Work({ t, lang }: Props) {
           <button className={styles.lbClose} onClick={closeLb}>✕ Close</button>
           <img
             src={getImage(lb.project.imageKey)}
-            alt={lang === 'de' ? lb.project.captionDe : lb.project.caption}
+            alt={lang === 'de' ? lb.project.titleDe : lb.project.title}
             className={styles.lbImg}
             onClick={(e) => e.stopPropagation()}
           />
           <p className={styles.lbCaption}>
-            {lang === 'de' ? lb.project.captionDe : lb.project.caption}
+            {lang === 'de' ? lb.project.titleDe : lb.project.title}
           </p>
           <button className={styles.lbPrev} onClick={(e) => { e.stopPropagation(); lbPrev(); }}>‹</button>
           <button className={styles.lbNext} onClick={(e) => { e.stopPropagation(); lbNext(); }}>›</button>

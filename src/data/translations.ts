@@ -38,6 +38,8 @@ export interface Translations {
   categories: string[];
   filterAll: string;
   roleTitle: string;
+  workIntro: string;
+  workIntroPara: string;
   brandsHeading: string;
   brandsSub: string;
 }
@@ -74,7 +76,9 @@ const translations: Record<Lang, Translations> = {
     heroQuote: 'Turning raw moments into visual narratives.',
     categories: ['Performance', 'Brand & Identity'],
     filterAll: 'All',
-    roleTitle: 'Graphic Designer',
+    roleTitle: 'Art Director',
+    workIntro: 'Explore a selection of the projects',
+    workIntroPara: 'Each design tells a story, with every detail thoughtfully crafted to inspire. Discover how bold visuals and strategic thinking have transformed ideas into impactful creations.',
     brandsHeading: "Some brands & orgs I've worked with",
     brandsSub: 'Over the years, collaborations with a wide range of brands and organizations have demonstrated adaptability to diverse industries while maintaining a commitment to tailored creative narratives',
   },
@@ -109,7 +113,9 @@ const translations: Record<Lang, Translations> = {
     heroQuote: 'Rohe Momente in visuelle Erzählungen verwandeln.',
     categories: ['Aufführung', 'Marke & Identität'],
     filterAll: 'Alle',
-    roleTitle: 'Grafikdesignerin',
+    roleTitle: 'Art Directorin',
+    workIntro: 'Entdecken Sie eine Auswahl der Projekte',
+    workIntroPara: 'Jedes Design erzählt eine Geschichte, mit jedem Detail sorgfältig gestaltet, um zu inspirieren. Entdecken Sie, wie mutige Visuals und strategisches Denken Ideen in wirkungsvolle Kreationen verwandelt haben.',
     brandsHeading: 'Einige Marken & Organisationen, mit denen ich gearbeitet habe',
     brandsSub: 'Im Laufe der Jahre haben Zusammenarbeiten mit einer Vielzahl von Marken und Organisationen die Anpassungsfähigkeit an verschiedene Branchen unter Beweis gestellt – stets mit dem Ziel, maßgeschneiderte kreative Erzählungen zu schaffen.',
   },

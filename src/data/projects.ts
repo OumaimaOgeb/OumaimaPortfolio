@@ -2,25 +2,25 @@ import { type ImageKey } from './images';
 
 export interface Project {
   imageKey: ImageKey;
-  caption: string;
-  captionDe: string;
-  category: string;
-  categoryDe: string;
+  title: string;
+  titleDe: string;
+  desc: string;
+  descDe: string;
 }
 
 const projects: Project[] = [
-  { imageKey: 'work1', caption: 'Work 1', captionDe: 'Werk 1', category: 'Performance',      categoryDe: 'Aufführung' },
-  { imageKey: 'work2', caption: 'Work 2', captionDe: 'Werk 2', category: 'Performance',      categoryDe: 'Aufführung' },
-  { imageKey: 'work3', caption: 'Work 3', captionDe: 'Werk 3', category: 'Performance',      categoryDe: 'Aufführung' },
-  { imageKey: 'work4', caption: 'Work 4', captionDe: 'Werk 4', category: 'Performance',      categoryDe: 'Aufführung' },
-  { imageKey: 'work5', caption: 'Work 5', captionDe: 'Werk 5', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work6', caption: 'Work 6', captionDe: 'Werk 6', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work7', caption: 'Work 7', captionDe: 'Werk 7', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work8',  caption: 'Work 8',  captionDe: 'Werk 8',  category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work9',  caption: 'Work 9',  captionDe: 'Werk 9',  category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work10', caption: 'Work 10', captionDe: 'Werk 10', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work11', caption: 'Work 11', captionDe: 'Werk 11', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
-  { imageKey: 'work12', caption: 'Work 12', captionDe: 'Werk 12', category: 'Brand & Identity', categoryDe: 'Marke & Identität' },
+  { imageKey: 'work1',  title: 'Clamant Body',       titleDe: 'Clamant Body',       desc: 'Brand Identity Development, Packaging Design, Photography.',          descDe: 'Markenidentität, Verpackungsdesign, Fotografie.' },
+  { imageKey: 'work2',  title: 'Clamant Body',       titleDe: 'Clamant Body',       desc: 'Brand Identity Development, Packaging Design, Photography.',          descDe: 'Markenidentität, Verpackungsdesign, Fotografie.' },
+  { imageKey: 'work3',  title: 'Chancy Beauty',      titleDe: 'Chancy Beauty',      desc: 'Brand Identity Development, Packaging Design, Photography.',          descDe: 'Markenidentität, Verpackungsdesign, Fotografie.' },
+  { imageKey: 'work4',  title: 'Chancy Beauty',      titleDe: 'Chancy Beauty',      desc: 'Creative & Art Direction, Digital Campaigns.',                        descDe: 'Kreative & Art Direction, Digitale Kampagnen.' },
+  { imageKey: 'work5',  title: 'Ozy',                titleDe: 'Ozy',                desc: 'Brand Identity Development, Packaging Design.',                       descDe: 'Markenidentität, Verpackungsdesign.' },
+  { imageKey: 'work6',  title: 'Ozy',                titleDe: 'Ozy',                desc: 'Brand Identity Development, Packaging Design.',                       descDe: 'Markenidentität, Verpackungsdesign.' },
+  { imageKey: 'work7',  title: 'Saraya',             titleDe: 'Saraya',             desc: 'Brand Identity Development, Social Media Content.',                   descDe: 'Markenidentität, Social-Media-Inhalte.' },
+  { imageKey: 'work8',  title: 'Saraya',             titleDe: 'Saraya',             desc: 'Brand Identity Development, Social Media Content.',                   descDe: 'Markenidentität, Social-Media-Inhalte.' },
+  { imageKey: 'work9',  title: 'Watanya',            titleDe: 'Watanya',            desc: 'Brand Identity Development, Digital Campaigns.',                      descDe: 'Markenidentität, Digitale Kampagnen.' },
+  { imageKey: 'work10', title: 'Watanya',            titleDe: 'Watanya',            desc: 'Brand Identity Development, Digital Campaigns.',                      descDe: 'Markenidentität, Digitale Kampagnen.' },
+  { imageKey: 'work11', title: 'Cité de la Culture', titleDe: 'Cité de la Culture', desc: 'Art Direction, Photography, Event Documentation.',                    descDe: 'Art Direction, Fotografie, Veranstaltungsdokumentation.' },
+  { imageKey: 'work12', title: 'Cité de la Culture', titleDe: 'Cité de la Culture', desc: 'Art Direction, Photography, Event Documentation.',                    descDe: 'Art Direction, Fotografie, Veranstaltungsdokumentation.' },
 ];
 
 export default projects;
