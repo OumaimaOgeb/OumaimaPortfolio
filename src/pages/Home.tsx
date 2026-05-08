@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import type { Translations } from '../data/translations';
 import { getImage } from '../data/images';
 import styles from './Home.module.css';
+import homeImage from '../assets/gifs/home.gif';
+import brandWatanya from '../assets/images/watanya.png';
+import brandOzy from '../assets/images/ozy.png';
+import brandClamant from '../assets/images/clamant.png';
+import brandChancy from '../assets/images/chancy.png';
+import brandCiteCulture from '../assets/images/citeCulture.png';
+import brandSaraya from '../assets/images/saraya.png';
+
+const brandLogos = [brandWatanya, brandOzy, brandClamant, brandChancy, brandCiteCulture, brandSaraya];
 
 interface Props {
   t: Translations;
@@ -23,11 +32,9 @@ export default function Home({ t }: Props) {
   return (
     <main className={styles.page}>
 
-      {/* Portrait */}
       <div className={styles.imageCenter}>
         <img
-          src="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/9ab6e0d1-dcc1-4988-aa06-2587b7df8636_rw_1200.gif?h=885e2978a4018e3cfb5b132d3f6e20c2"
-          srcSet="https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/9ab6e0d1-dcc1-4988-aa06-2587b7df8636_rw_600.gif?h=b4166b5b3d7ebafb4e7bb77e132b0aa1 600w, https://cdn.myportfolio.com/bd64156d-0404-4e28-bf35-e8584a8679cc/9ab6e0d1-dcc1-4988-aa06-2587b7df8636_rw_1200.gif?h=885e2978a4018e3cfb5b132d3f6e20c2 864w"
+          src={homeImage}
           sizes="(max-width: 864px) 100vw, 864px"
           alt="Ogeb Oumaima"
         />
@@ -117,6 +124,21 @@ export default function Home({ t }: Props) {
             <div className={styles.statLabel}>{s.label}</div>
           </div>
         ))}
+      </div>
+
+      {/* Brands */}
+      <div className={styles.brandsSection}>
+        <div className={styles.brandsHeading}>
+          <h2>{t.brandsHeading}</h2>
+          <p>{t.brandsSub}</p>
+        </div>
+        <div className={styles.brandsGrid}>
+          {brandLogos.map((src, i) => (
+            <div key={i} className={styles.brandItem}>
+              <img src={src} alt="" />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Some work */}

@@ -38,6 +38,8 @@ export interface Translations {
   categories: string[];
   filterAll: string;
   roleTitle: string;
+  brandsHeading: string;
+  brandsSub: string;
 }
 
 const translations: Record<Lang, Translations> = {
@@ -54,10 +56,10 @@ const translations: Record<Lang, Translations> = {
       { title: 'Storytelling:', desc: 'Developing narratives that connect people to art, culture, and creative experiences.' },
     ],
     stats: [
-      { num: '16+', label: 'Events Documented' },
-      { num: '2', label: 'Brands' },
-      { num: '3', label: 'Industries' },
-      { num: '3+', label: 'Years of Experience' },
+      { num: '165+', label: 'Events Documented' },
+      { num: '52', label: 'Brands' },
+      { num: '10+', label: 'Industries' },
+      { num: '4+', label: 'Years of Experience' },
     ],
     workHeading: "Some work I've done",
     workSub: 'From live performance documentation to brand visual identities — a selection of projects across photography, curation, and design.',
@@ -73,6 +75,8 @@ const translations: Record<Lang, Translations> = {
     categories: ['Performance', 'Brand & Identity'],
     filterAll: 'All',
     roleTitle: 'Graphic Designer',
+    brandsHeading: "Some brands & orgs I've worked with",
+    brandsSub: 'Over the years, collaborations with a wide range of brands and organizations have demonstrated adaptability to diverse industries while maintaining a commitment to tailored creative narratives',
   },
   de: {
     nav: { home: 'Startseite', work: 'Werke', contact: 'Kontakt' },
@@ -106,6 +110,8 @@ const translations: Record<Lang, Translations> = {
     categories: ['Aufführung', 'Marke & Identität'],
     filterAll: 'Alle',
     roleTitle: 'Grafikdesignerin',
+    brandsHeading: 'Einige Marken & Organisationen, mit denen ich gearbeitet habe',
+    brandsSub: 'Im Laufe der Jahre haben Zusammenarbeiten mit einer Vielzahl von Marken und Organisationen die Anpassungsfähigkeit an verschiedene Branchen unter Beweis gestellt – stets mit dem Ziel, maßgeschneiderte kreative Erzählungen zu schaffen.',
   },
 };
 
