@@ -146,10 +146,14 @@
 @media (max-width: 900px) {
   .hero { padding: 9rem 1.5rem 3rem; }
   .intro { padding: 2rem 1.5rem 1rem; text-align: center; }
-  .introTitle { font-size: clamp(1.2rem, 5vw, 1.8rem); }
-  .introPara { font-size: 0.72rem; max-width: 100%; margin: 0 auto; }
+  .introTitle { font-size: clamp(1.6rem, 7vw, 3rem); margin-top: 2rem; margin-bottom: 1rem; }
+  .introPara { font-size: 0.78rem; padding: 0 1.5rem; margin-top: 1.5rem; line-height: 1.8; }
   .grid { padding: 1rem 1.5rem 3rem; }
   .row { flex-direction: column; gap: 2rem; }
   .imgWrap img { width: 90%; }
   .caption { width: 90%; }
+}
+@media (max-width: 480px) {
+  .introTitle { font-size: clamp(1.4rem, 8vw, 2rem); }
+  .introPara { font-size: 0.72rem; padding: 0 1rem; }
 }

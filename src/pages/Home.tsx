@@ -54,9 +54,6 @@ export default function Home({ t }: Props) {
         <div className={styles.treeBig}>
           <p className={styles.bioText}>{t.bio}</p>
         </div>
-        <div className={`${styles.treeSmall} ${styles.treeBottom}`}>
-          <p className={styles.location}>Tunis, Tunisia.</p>
-        </div>
       </div>
 
       <hr className={styles.divider} />
