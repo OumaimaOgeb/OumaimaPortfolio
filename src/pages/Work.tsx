@@ -26,11 +26,6 @@ export default function Work({ t, lang }: Props) {
         lang === 'de' ? p.categoryDe === activeCategory : p.category === activeCategory
       );
 
-  const rows: Project[][] = [];
-  for (let i = 0; i < filtered.length; i += 2) {
-    rows.push(filtered.slice(i, i + 2));
-  }
-
   const openLightbox = (project: Project, index: number) => {
     setLb({ open: true, project, index });
     document.body.style.overflow = 'hidden';
@@ -100,25 +95,21 @@ export default function Work({ t, lang }: Props) {
 
       {/* Grid */}
       <div className={styles.grid}>
-        {rows.map((row, ri) => (
-          <div className={styles.row} key={ri}>
-            {row.map((project, ci) => (
-              <div
-                key={project.imageKey}
-                className={styles.card}
-                onClick={() => openLightbox(project, ri * 2 + ci)}
-              >
-                <img src={getImage(project.imageKey)} alt={lang === 'de' ? project.captionDe : project.caption} />
-                <div className={styles.cardOverlay}>
-                  <p className={styles.cardCaption}>
-                    {lang === 'de' ? project.captionDe : project.caption}
-                  </p>
-                  <span className={styles.cardCategory}>
-                    {lang === 'de' ? project.categoryDe : project.category}
-                  </span>
-                </div>
-              </div>
-            ))}
+        {filtered.map((project, i) => (
+          <div
+            key={project.imageKey}
+            className={styles.card}
+            onClick={() => openLightbox(project, i)}
+          >
+            <img src={getImage(project.imageKey)} alt={lang === 'de' ? project.captionDe : project.caption} />
+            <div className={styles.cardOverlay}>
+              <p className={styles.cardCaption}>
+                {lang === 'de' ? project.captionDe : project.caption}
+              </p>
+              <span className={styles.cardCategory}>
+                {lang === 'de' ? project.categoryDe : project.category}
+              </span>
+            </div>
           </div>
         ))}
       </div>
