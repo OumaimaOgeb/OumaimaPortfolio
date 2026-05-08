@@ -364,4 +364,6 @@
   .brandsGrid { grid-template-columns: 1fr; }
   .gCol { flex: 1 1 100%; }
   .frameGrid { padding: 1.5rem 1rem; }
+  .roleTyping { font-size: clamp(1.8rem, 9vw, 3.5rem); white-space: normal; border-right: none; animation: none; width: auto; overflow: visible; }
+  .roleBanner { padding: 1.5rem 1rem; }
 }
