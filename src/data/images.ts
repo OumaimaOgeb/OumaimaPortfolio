@@ -10,6 +10,6 @@ export type ImageKey =
   | 'img9' | 'img10' | 'img11' | 'img12' | 'img13' | 'img14' | 'img15' | 'img16'
   | 'work1' | 'work2' | 'work3' | 'work4' | 'work5' | 'work6' | 'work7' | 'work8'
   | 'work9' | 'work10' | 'work11' | 'work12'
-  | 'chancy' | 'chouchou' | 'clamant' | 'ozy' | 'ozy_linen';
+  | 'chancy' | 'chouchou' | 'clamant' | 'ozy' | 'ozy_linen' | 'concert';
 
 export const getImage = (key: ImageKey): string => IMG[key] ?? '';
